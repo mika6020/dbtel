@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-cd $HOME/permag.ir
+cd $HOME/dbtel
 
 install() {
 	    cd tg
 		sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 		sudo apt-get install g++-4.7 c++-4.7
-		sudo apt-get update		
+		sudo apt-get update
         sudo apt-get upgrade
 		sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
 		sudo apt-get install lua-lgi
@@ -32,9 +32,8 @@ if [ ! -f ./tg/tgcli ]; then
  fi
 
    echo -e "\033[38;5;208m"
-   echo -e "     > permag.ir bartarin anti spam farsi                      "
+   echo -e "     > pgbot bartarin anti spam farsi                      "
    echo -e "                                              \033[0;00m"
    echo -e "\e[36m"
    ./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
 fi
-		
