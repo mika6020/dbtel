@@ -12,7 +12,7 @@ local function run(msg, matches)
 		if matches[2]:lower() == 'fosh' then
 			if not is_mod(msg) then return end
 			local fosh = redis:hget('settings:fosh',msg.chat_id_)
-			if fosh == 'on' then 
+			if fosh == 'on' then
 				redis:hset('settings:fosh',msg.chat_id_,'off')
 				return ''
 			elseif fosh == 'off' then
@@ -24,7 +24,7 @@ local function run(msg, matches)
 		if matches[2]:lower() == 'fosh' then
 			if not is_mod(msg) then return end
 			local fosh = redis:hget('settings:fosh',msg.chat_id_)
-			if fosh == 'off' then 
+			if fosh == 'off' then
 				redis:hset('settings:fosh',msg.chat_id_,'on')
 				return ''
 			elseif fosh == 'on' then
@@ -32,33 +32,27 @@ local function run(msg, matches)
 			end
 		end
 	end
-	
+
 	--Delete words contains --حذف پیامهای فحش
 	if not is_mod(msg) then
 		local fosh = redis:hget('settings:fosh',msg.chat_id_)
-		if fosh == 'on' then 
-			tdcli.deleteMessages(msg.chat_id_, {[0] = msg.id_}, dl_cb, nil)	
+		if fosh == 'on' then
+			tdcli.deleteMessages(msg.chat_id_, {[0] = msg.id_}, dl_cb, nil)
 		end
 	end
 end
- 
+
 return {
   patterns = {
-    "(ک*س)$",
+
     "کیر",
 	"کص",
 	"کــــــــــیر",
 	"کــــــــــــــــــــــــــــــیر",
 	"کـیـــــــــــــــــــــــــــــــــــــــــــــــــــر",
-    "ک×یر",
-	"ک÷یر",
-	"ک*ص",
 	"کــــــــــیرر",
     "kir",
 	"kos",
-	"گوساله",
-	"gosale",
-	"gusale",
 	"جاکش",
 	"قرمساق",
 	"دیوس",
@@ -69,6 +63,80 @@ return {
 	"10yus",
 	"10yu3",
 	"daus",
+	"گایید",
+	"گاییدی",
+	"لاشی",
+	"پدرسگ",
+	"پدرسک",
+	"پریود",
+	"جاکش",
+	"مادرسگ",
+	"شورت",
+	"عوضی",
+	"داشاق",
+	"داشاغ",
+	"koskesh",
+	"gaidam",
+	"ننه قهوه",
+	"مادرتوگاییدم",
+	"پدرتوگاییدم",
+	"بیابخور",
+	"جنده",
+	"مادرجنده",
+	"حشری",
+	"جق",
+	"جقی",
+	"ساک",
+	"فاک",
+	"لز",
+	"مادرقهبه",
+	"حرومزاده",
+	"کوس",
+	"jende",
+	"Jende",
+	"sex",
+	"SEX",
+	"sexy",
+	"SEXY",
+	"Sexy",
+	"kos",
+	"KOS",
+	"FUK",
+	"fuk",
+	"fuck",
+	"fak",
+	"koloft",
+	"توله سگ",
+	"پورن",
+	"کونی",
+	"oskol",
+	"کسکش",
+	"کیرم",
+	"کیر",
+	"تخمی",
+	"گاییدم",
+	"کسخلا",
+	"ممه",
+	"کون",
+	"سیکتیر",
+	"سیک",
+	"گاییدمت",
+	"جق",
+	"کص",
+	"کسکش",
+	"حرومزاده",
+	"سگ پدر",
+	"مادر جنده",
+	"جنده",
+	"سکسی",
+	"سکس",
+	"بکنمت",
+	"کونی",
+	"چاقال",
+	"کونده",
+	"مادر قهوه",
+	"مادرقهوه",
+	"کیرم دهنت",
 	"dau3",
 	"تخمی",
 	"حرومزاده",
@@ -84,10 +152,6 @@ return {
 	"tokhmi",
 	"madarjende",
 	"kharkosde",
-	"خارکسده",
-	"خوارکسده",
-	"خارکصده",
-	"خوارکصده",
 	"kharko3de",
 	"مادرجنده",
 
@@ -99,7 +163,3 @@ return {
   run = run,
   pre_process = pre_process
 }
-
--- http://permag.ir
--- @permag_ir
--- @permag_bots
