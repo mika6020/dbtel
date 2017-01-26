@@ -77,20 +77,24 @@ function create_config( )
     "groupmanager",
     "msg-checks",
     "plugins",
-    "tools"
+    "tools",
+    "expiretime",
+    "mute_time",
+    "del",
+    "filter"
  },
     sudo_users = {123456789},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》dbtel.ir
+    info_text = [[》permag.ir v2
 
 
 🔰Our channel :
-》@mika6020《
+》@permag_bots《
 
 🔰Our website :
-》http://dbtel.ir
+》http://permag.ir
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -723,7 +727,3 @@ elseif msg.content_.ID == "MessageGame" then
   end
 
 end
-
--- http://permag.ir
--- @permag_ir
--- @permag_bots

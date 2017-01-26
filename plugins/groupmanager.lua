@@ -1565,7 +1565,7 @@ end
 end
 end
 
-local function unmute_video(msg, data, target)
+local function unmute_audio(msg, data, target)
 local hash = "gp_lang:"..msg.chat_id_
 local lang = redis:get(hash)
  if not is_mod(msg) then
@@ -1668,7 +1668,7 @@ if mute_sticker == "yes" then
 if not lang then
  return "*Mute Sticker* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن برچسب فعال است"
+ return "ارسال استیکر ممنوع است"
 end
 else
  data[tostring(target)]["mutes"]["mute_sticker"] = "yes"
@@ -1676,7 +1676,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Sticker* _Has Been Enabled_"
 else
- return "بیصدا کردن برچسب فعال شد"
+ return "ارسال استیکر ممنوع شد"
 end
 end
 end
@@ -1697,7 +1697,8 @@ local mute_sticker = data[tostring(target)]["mutes"]["mute_sticker"]
 if not lang then
 return "*Mute Sticker* _Is Already Disabled_"
 elseif lang then
-return "بیصدا کردن برچسب غیر فعال است"
+return "ارسال استیکر ازاد است"
+
 end
 else
 data[tostring(target)]["mutes"]["mute_sticker"] = "no"
@@ -1705,7 +1706,7 @@ data[tostring(target)]["mutes"]["mute_sticker"] = "no"
 if not lang then
 return "*Mute Sticker* _Has Been Disabled_"
 else
-return "بیصدا کردن برچسب غیر فعال شد"
+return "ارسال استیکر ازاد شد"
 end
 end
 end
