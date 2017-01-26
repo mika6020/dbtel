@@ -81,6 +81,9 @@ function create_config( )
     "expiretime",
     "mute_time",
     "del",
+    "lock_en",
+    "lock_fosh",
+    "lock_operator",
     "filter"
  },
     sudo_users = {123456789},
