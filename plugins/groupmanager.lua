@@ -36,17 +36,17 @@ end
           lock_bots = 'yes'
           },
    mutes = {
-                  mute_fwd = 'no',
-                  mute_audio = 'no',
-                  mute_video = 'no',
-                  mute_contact = 'no',
+                  mute_fwd = 'yes',
+                  mute_audio = 'yes',
+                  mute_video = 'yes',
+                  mute_contact = 'yes',
                   mute_text = 'no',
-                  mute_photos = 'no',
-                  mute_gif = 'no',
-                  mute_loc = 'no',
-                  mute_doc = 'no',
-                  mute_sticker = 'no',
-                  mute_voice = 'no',
+                  mute_photos = 'yes',
+                  mute_gif = 'yes',
+                  mute_loc = 'yes',
+                  mute_doc = 'yes',
+                  mute_sticker = 'yes',
+                  mute_voice = 'yes',
                    mute_all = 'no'
           }
       }
