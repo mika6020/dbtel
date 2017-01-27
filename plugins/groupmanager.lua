@@ -36,17 +36,17 @@ end
           lock_bots = 'yes'
           },
    mutes = {
-                  mute_fwd = 'yes',
-                  mute_audio = 'yes',
-                  mute_video = 'yes',
-                  mute_contact = 'yes',
+                  mute_fwd = 'no',
+                  mute_audio = 'no',
+                  mute_video = 'no',
+                  mute_contact = 'no',
                   mute_text = 'no',
-                  mute_photos = 'yes',
-                  mute_gif = 'yes',
-                  mute_loc = 'yes',
-                  mute_doc = 'yes',
-                  mute_sticker = 'yes',
-                  mute_voice = 'yes',
+                  mute_photos = 'no',
+                  mute_gif = 'no',
+                  mute_loc = 'no',
+                  mute_doc = 'no',
+                  mute_sticker = 'no',
+                  mute_voice = 'no',
                    mute_all = 'no'
           }
       }
@@ -2796,8 +2796,8 @@ tdcli_function ({
           end
 			end
      end
-if matches[1] == "permag" and is_mod(msg) then
-	text10 = [[hi you can create bot at -> @permag_bots]]
+if matches[1] == "pgbot" and is_mod(msg) then
+	text10 = [[hi you can create bot at -> @mika6020]]
 return text10
 end
 if matches[1] == "setname" and matches[2] and is_mod(msg) then
@@ -3231,7 +3231,7 @@ text4 = [[
 return text4
 end
 
-if matches[1] == "انلاینی" and is_mod(msg) then
+if matches[1] == "pg" and is_mod(msg) then
 text5 = [[
 😎سخت مشغولم و حواسم به همه چی هست
 ]]
@@ -3241,7 +3241,7 @@ end
 return {
 patterns ={
 "^[!/#](مدیریت)$",
-"^[!/#]([Pp][Gg])$",
+"^[!/#](pg)$",
 "^[!/#](ممنوع)$",
 "^[!/#](قفل)$",
 "^[!/#](id)$",
@@ -3271,7 +3271,7 @@ patterns ={
 "^[!/#](link)$",
 "^[!/#](setlink)$",
 "^[!/#](rules)$",
-"^[!/#](permag)$",
+"^[!/#](pgbot)$",
 "^[!/#](setrules) (.*)$",
 "^[!/#](about)$",
 "^[!/#](setabout) (.*)$",

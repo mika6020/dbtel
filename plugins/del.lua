@@ -18,7 +18,7 @@ local function run(msg, matches)
     offset_ = 0,
     limit_ = tonumber(matches[2])
   }, delmsg, nil)
-             pm ='*'..matches[2]..'* _���� ���� �ǘ ��_'
+             pm ='*'..matches[2]..'* _پیام ها پاک شدند_'
              tdcli.sendMessage(msg.chat_id_, msg.id_, 1, pm, 1, 'html')
          end
      end
@@ -34,6 +34,3 @@ return {
     },
     run = run
 }
--- http://permag.ir
--- @permag_ir
--- @permag_bots

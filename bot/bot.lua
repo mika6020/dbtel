@@ -81,7 +81,6 @@ function create_config( )
     "expiretime",
     "mute_time",
     "del",
-    "lock_en",
     "lock_fosh",
     "lock_operator",
     "filter"
@@ -90,14 +89,17 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》permag.ir v2
+    info_text = [[》dbtel.ir v2
 
 
-🔰Our channel :
-》@permag_bots《
+🔰Our id :
+》@mika6020《
 
 🔰Our website :
-》http://permag.ir
+》http://dbtel.ir
+
+🔰 cellphone :
+》09351304504
 ]],
   }
   serialize_to_file(config, './data/config.lua')
