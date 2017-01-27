@@ -8,7 +8,7 @@ local function run(msg, matches)
     if msg.chat_id_:match("^-100") then
        if is_owner(msg) or is_mod(msg) then
           if tonumber(matches[2]) > 100 or tonumber(matches[2]) < 1 then
-             pm = '_ 100> ����� ���� ��� ���� ��� �� ���� >1 _'
+             pm = '_ 100>  >1 _'
              tdcli.sendMessage(msg.chat_id_, data.msg.id_, 1, pm, 1, 'html')
              else
           tdcli_function ({
@@ -18,11 +18,11 @@ local function run(msg, matches)
     offset_ = 0,
     limit_ = tonumber(matches[2])
   }, delmsg, nil)
-             pm ='*'..matches[2]..'* _پیام ها پاک شدند_'
+             pm ='*'..matches[2]..'* پیام پاک شد'
              tdcli.sendMessage(msg.chat_id_, msg.id_, 1, pm, 1, 'html')
          end
      end
- else pm ='��� ����� ��� �� _���� ����_ ���� ���.'
+ else pm ='پیام پاک شدند'
     tdcli.sendMessage(msg.chat_id_, msg.id_, 1, pm, 1, 'html')
 end
 end
