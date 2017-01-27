@@ -650,17 +650,17 @@ end
 local lock_en = data[tostring(target)]["settings"]["lock_en"]
 if lock_en == "yes" then
 if not lang then
- return "*en* _Posting Is Already Locked_"
+ return "*english* _Posting Is Already Locked_"
 elseif lang then
- return "قفل فحش فعال است"
+ return "قفل انگلیسی فعال است"
 end
 else
 data[tostring(target)]["settings"]["lock_en"] = "yes"
 save_data(_config.moderation.data, data)
 if not lang then
- return "*en* _ Has Been Locked_"
+ return "*english* _ Has Been Locked_"
 else
- return "قفل فحش فعال شد"
+ return "قفل انگلیسی فعال شد"
 end
 end
 end
@@ -679,16 +679,16 @@ end
 local lock_en = data[tostring(target)]["settings"]["lock_en"]
  if lock_en == "no" then
 if not lang then
-return "*en* _Is Not Locked_"
+return "*english* _Is Not Locked_"
 elseif lang then
-return "قفل فحش غیرفعال میباشد"
+return "قفل انگلیسی غیرفعال است"
 end
 else
 data[tostring(target)]["settings"]["lock_en"] = "no" save_data(_config.moderation.data, data)
 if not lang then
-return "*en* _Has Been Unlocked_"
+return "*english* _Has Been Unlocked_"
 else
-return "قفل فحش غیرفعال شد"
+return "قفل انگلیسی غیرفعال شد"
 end
 end
 end
@@ -713,7 +713,7 @@ if lock_operator == "yes" then
 if not lang then
  return "*operator* _Posting Is Already Locked_"
 elseif lang then
- return "قفل فحش فعال است"
+ return "قفل اپراتور فعال است"
 end
 else
 data[tostring(target)]["settings"]["lock_operator"] = "yes"
@@ -721,7 +721,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*operator* _ Has Been Locked_"
 else
- return "قفل فحش فعال شد"
+ return "قفل اپراتور فعال شد"
 end
 end
 end
@@ -742,14 +742,14 @@ local lock_operator = data[tostring(target)]["settings"]["lock_operator"]
 if not lang then
 return "*operator* _Is Not Locked_"
 elseif lang then
-return "قفل فحش غیرفعال میباشد"
+return "قفل اپراتور غیرفعال میباشد"
 end
 else
 data[tostring(target)]["settings"]["lock_operator"] = "no" save_data(_config.moderation.data, data)
 if not lang then
 return "*operator* _Has Been Unlocked_"
 else
-return "قفل فحش غیرفعال شد"
+return "قفل اپراتور غیرفعال شد"
 end
 end
 end
@@ -3233,7 +3233,7 @@ end
 
 if matches[1] == "انلاینی" and is_mod(msg) then
 text5 = [[
-😎آنلاینم عزیز و حواسم به گروه هست
+😎سخت مشغولم و حواسم به همه چی هست
 ]]
 return text5
 end
@@ -3241,7 +3241,7 @@ end
 return {
 patterns ={
 "^[!/#](مدیریت)$",
-"^[!/#](انلاینی)$",
+"^[!/#]([Pp][Gg])$",
 "^[!/#](ممنوع)$",
 "^[!/#](قفل)$",
 "^[!/#](id)$",
@@ -3287,7 +3287,3 @@ patterns ={
 },
 run=run
 }
---end groupmanager.lua #permag.ir#
--- http://permag.ir
--- @permag_ir
--- @permag_bots
